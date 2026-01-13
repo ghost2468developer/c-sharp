@@ -50,7 +50,19 @@ class Program
 {
     static void Main(string[] args)
     {
-        RunCalculator();
+        while (true)
+        {
+            RunCalculator();
+
+            Console.Write("\nDo you want to continue? (y/n): ");
+            string choice = Console.ReadLine();
+
+            if (choice.ToLower() != "y")
+            {
+                break;
+            }
+            Console.Clear();
+        }
     }
 
     static void RunCalculator()
