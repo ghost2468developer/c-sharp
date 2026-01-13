@@ -1,0 +1,15 @@
+C:\Users\Ghost DEV\Documents\GitHub\c-sharp\StudentGradeManager\bin\Debug\net10.0\StudentGradeManager.exe
+C:\Users\Ghost DEV\Documents\GitHub\c-sharp\StudentGradeManager\bin\Debug\net10.0\StudentGradeManager.deps.json
+C:\Users\Ghost DEV\Documents\GitHub\c-sharp\StudentGradeManager\bin\Debug\net10.0\StudentGradeManager.runtimeconfig.json
+C:\Users\Ghost DEV\Documents\GitHub\c-sharp\StudentGradeManager\bin\Debug\net10.0\StudentGradeManager.dll
+C:\Users\Ghost DEV\Documents\GitHub\c-sharp\StudentGradeManager\bin\Debug\net10.0\StudentGradeManager.pdb
+C:\Users\Ghost DEV\Documents\GitHub\c-sharp\StudentGradeManager\obj\Debug\net10.0\StudentGradeManager.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ghost DEV\Documents\GitHub\c-sharp\StudentGradeManager\obj\Debug\net10.0\StudentGradeManager.AssemblyInfoInputs.cache
+C:\Users\Ghost DEV\Documents\GitHub\c-sharp\StudentGradeManager\obj\Debug\net10.0\StudentGradeManager.AssemblyInfo.cs
+C:\Users\Ghost DEV\Documents\GitHub\c-sharp\StudentGradeManager\obj\Debug\net10.0\StudentGradeManager.csproj.CoreCompileInputs.cache
+C:\Users\Ghost DEV\Documents\GitHub\c-sharp\StudentGradeManager\obj\Debug\net10.0\StudentGradeManager.sourcelink.json
+C:\Users\Ghost DEV\Documents\GitHub\c-sharp\StudentGradeManager\obj\Debug\net10.0\StudentGradeManager.dll
+C:\Users\Ghost DEV\Documents\GitHub\c-sharp\StudentGradeManager\obj\Debug\net10.0\refint\StudentGradeManager.dll
+C:\Users\Ghost DEV\Documents\GitHub\c-sharp\StudentGradeManager\obj\Debug\net10.0\StudentGradeManager.pdb
+C:\Users\Ghost DEV\Documents\GitHub\c-sharp\StudentGradeManager\obj\Debug\net10.0\StudentGradeManager.genruntimeconfig.cache
+C:\Users\Ghost DEV\Documents\GitHub\c-sharp\StudentGradeManager\obj\Debug\net10.0\ref\StudentGradeManager.dll
