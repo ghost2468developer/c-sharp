@@ -44,6 +44,65 @@
 // }
 
 // Rewrite using methods
+// using System;
+
+// class Program
+// {
+//     static void Main(string[] args)
+//     {
+//         while (true)
+//         {
+//             RunCalculator();
+
+//             Console.Write("\nDo you want to continue? (y/n): ");
+//             string choice = Console.ReadLine();
+
+//             if (choice.ToLower() != "y")
+//             {
+//                 break;
+//             }
+//             Console.Clear();
+//         }
+//     }
+
+//     static void RunCalculator()
+//     {
+//         Console.WriteLine("Calculator");
+//         double num1 = GetNumber("Enter first number: ");
+//         double num2 = GetNumber("Enter second number: ");
+//         Console.Write("Enter operation (+, -, *, /): ");
+//         string operation = Console.ReadLine();
+//         double result = Calculate(num1, num2, operation);
+//         Console.WriteLine($"Result: {result}");
+//     }
+
+//     static double GetNumber(string message)
+//     {
+//         Console.Write(message);
+//         return Convert.ToDouble(Console.ReadLine());
+//     }
+
+//     static double Calculate(double num1, double num2, string operation)
+//     {
+//         if (operation == "+") return num1 + num2;
+//         if (operation == "-") return num1 - num2;
+//         if (operation == "*") return num1 * num2;
+//         if (operation == "/")
+//         {
+//             if (num2 == 0)
+//             {
+//                 Console.WriteLine("Error: Cannot divide by zero.");
+//                 return 0;
+//             }
+//             return num1 / num2;
+//         }
+
+//         Console.WriteLine("Invalid operation.");
+//         return 0;
+//     }
+// }
+
+// OOP C#
 using System;
 
 class Program
@@ -59,9 +118,9 @@ class Program
 
             if (choice.ToLower() != "y")
             {
-                break;
+                break; // Exit the program
             }
-            Console.Clear();
+            Console.Clear(); // Clear screen for next calculation
         }
     }
 
@@ -72,32 +131,44 @@ class Program
         double num2 = GetNumber("Enter second number: ");
         Console.Write("Enter operation (+, -, *, /): ");
         string operation = Console.ReadLine();
-        double result = Calculate(num1, num2, operation);
+        Calculator calculator = new Calculator(); // Create a Calculator object
+        double result = calculator.Calculate(num1, num2, operation);
         Console.WriteLine($"Result: {result}");
     }
-
     static double GetNumber(string message)
     {
         Console.Write(message);
         return Convert.ToDouble(Console.ReadLine());
     }
-
-    static double Calculate(double num1, double num2, string operation)
+}
+// Calculator Class
+class Calculator
+{
+    // Main method to decide which operation to perform
+    public double Calculate(double a, double b, string operation)
     {
-        if (operation == "+") return num1 + num2;
-        if (operation == "-") return num1 - num2;
-        if (operation == "*") return num1 * num2;
-        if (operation == "/")
+        switch (operation)
         {
-            if (num2 == 0)
-            {
-                Console.WriteLine("Error: Cannot divide by zero.");
+            case "+": return Add(a, b);
+            case "-": return Subtract(a, b);
+            case "*": return Multiply(a, b);
+            case "/": return Divide(a, b);
+            default:
+                Console.WriteLine("Invalid operation.");
                 return 0;
-            }
-            return num1 / num2;
         }
-
-        Console.WriteLine("Invalid operation.");
-        return 0;
+    }
+    // Basic operations
+    private double Add(double a, double b) => a + b;
+    private double Subtract(double a, double b) => a - b;
+    private double Multiply(double a, double b) => a * b;
+    private double Divide(double a, double b)
+    {
+        if (b == 0)
+        {
+            Console.WriteLine("Error: Cannot divide by zero.");
+            return 0;
+        }
+        return a / b;
     }
 }
