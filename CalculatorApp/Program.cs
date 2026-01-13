@@ -42,6 +42,8 @@
 //         Console.WriteLine($"Result: {result}");
 //     }
 // }
+
+// Rewrite using methods
 using System;
 
 class Program
