@@ -6,7 +6,7 @@ class Program
     static void Main(string[] args)
     {
         List<BankAccount> accounts = new List<BankAccount>();
-        int nextAccountNumber = 1001; // Simple auto-increment account number
+        int nextAccountNumber = 1001;
 
         while (true)
         {
@@ -16,10 +16,8 @@ class Program
             Console.WriteLine("3. Withdraw");
             Console.WriteLine("4. Show Account Details");
             Console.WriteLine("5. Exit");
-
             Console.Write("Choose an option: ");
             string choice = Console.ReadLine();
-
             switch (choice)
             {
                 case "1":
@@ -42,20 +40,15 @@ class Program
             }
         }
     }
-
-    // Create a new bank account
     static void CreateAccount(List<BankAccount> accounts, ref int accountNumber)
     {
         Console.Write("Enter account holder name: ");
         string name = Console.ReadLine();
-
         Console.WriteLine("Select account type:");
         Console.WriteLine("1. Checking");
         Console.WriteLine("2. Savings");
-
         string typeChoice = Console.ReadLine();
         BankAccount newAccount;
-
         switch (typeChoice)
         {
             case "1":
@@ -68,13 +61,10 @@ class Program
                 Console.WriteLine("Invalid account type.");
                 return;
         }
-
         accounts.Add(newAccount);
         Console.WriteLine($"Account created successfully! Account Number: {accountNumber}");
         accountNumber++;
     }
-
-    // Deposit money into an account
     static void Deposit(List<BankAccount> accounts)
     {
         BankAccount account = FindAccount(accounts);
@@ -91,13 +81,10 @@ class Program
             Console.WriteLine("Invalid amount.");
         }
     }
-
-    // Withdraw money from an account
     static void Withdraw(List<BankAccount> accounts)
     {
         BankAccount account = FindAccount(accounts);
         if (account == null) return;
-
         Console.Write("Enter amount to withdraw: ");
         if (double.TryParse(Console.ReadLine(), out double amount) && amount > 0)
         {
@@ -115,8 +102,6 @@ class Program
             Console.WriteLine("Invalid amount.");
         }
     }
-
-    // Show all accounts
     static void ShowAccounts(List<BankAccount> accounts)
     {
         if (accounts.Count == 0)
@@ -124,14 +109,11 @@ class Program
             Console.WriteLine("No accounts available.");
             return;
         }
-
         foreach (BankAccount account in accounts)
         {
             account.ShowInfo();
         }
     }
-
-    // Helper: find account by account number
     static BankAccount FindAccount(List<BankAccount> accounts)
     {
         Console.Write("Enter account number: ");
@@ -140,7 +122,6 @@ class Program
             Console.WriteLine("Invalid account number.");
             return null;
         }
-
         BankAccount account = accounts.Find(a => a.AccountNumber == accNumber);
         if (account == null)
         {
@@ -149,62 +130,48 @@ class Program
         return account;
     }
 }
-
-// ====== Base Bank Account Class ======
 abstract class BankAccount
 {
     public int AccountNumber { get; private set; }
     public string AccountHolder { get; private set; }
     protected double Balance { get; set; }
-
     public BankAccount(int accountNumber, string accountHolder)
     {
         AccountNumber = accountNumber;
         AccountHolder = accountHolder;
         Balance = 0;
     }
-
     public void Deposit(double amount)
     {
         Balance += amount;
     }
-
     public virtual bool Withdraw(double amount)
     {
         if (amount > Balance) return false;
         Balance -= amount;
         return true;
     }
-
     public virtual void ShowInfo()
     {
         Console.WriteLine($"Account #{AccountNumber} | {AccountHolder} | Balance: {Balance:C}");
     }
 }
-
-// ====== Checking Account ======
 class CheckingAccount : BankAccount
 {
     public CheckingAccount(int accountNumber, string accountHolder) : base(accountNumber, accountHolder)
     {
     }
-
     public override void ShowInfo()
     {
         Console.WriteLine($"[Checking] Account #{AccountNumber} | {AccountHolder} | Balance: {Balance:C}");
     }
 }
-
-// ====== Savings Account ======
 class SavingsAccount : BankAccount
 {
-    private double InterestRate = 0.03; // 3% interest
-
+    private double InterestRate = 0.03;
     public SavingsAccount(int accountNumber, string accountHolder) : base(accountNumber, accountHolder)
     {
     }
-
-    // Add interest on withdrawal (just for demonstration)
     public override bool Withdraw(double amount)
     {
         double totalAmount = amount + (amount * InterestRate);
@@ -212,7 +179,6 @@ class SavingsAccount : BankAccount
         Balance -= totalAmount;
         return true;
     }
-
     public override void ShowInfo()
     {
         Console.WriteLine($"[Savings] Account #{AccountNumber} | {AccountHolder} | Balance: {Balance:C}");
