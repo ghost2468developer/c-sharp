@@ -10,7 +10,7 @@ class Program
 
         while (true)
         {
-            Console.WriteLine("\n=== Bank Account System ===");
+            Console.WriteLine("Bank Account System");
             Console.WriteLine("1. Create Account");
             Console.WriteLine("2. Deposit");
             Console.WriteLine("3. Withdraw");
