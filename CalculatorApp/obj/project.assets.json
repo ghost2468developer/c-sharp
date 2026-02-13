@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ghost DEV\\Documents\\GitHub\\c-sharp\\CalculatorApp\\CalculatorApp.csproj",
+      "projectUniqueName": "H:\\Github\\c-sharp\\CalculatorApp\\CalculatorApp.csproj",
       "projectName": "CalculatorApp",
-      "projectPath": "C:\\Users\\Ghost DEV\\Documents\\GitHub\\c-sharp\\CalculatorApp\\CalculatorApp.csproj",
+      "projectPath": "H:\\Github\\c-sharp\\CalculatorApp\\CalculatorApp.csproj",
       "packagesPath": "C:\\Users\\Ghost DEV\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ghost DEV\\Documents\\GitHub\\c-sharp\\CalculatorApp\\obj\\",
+      "outputPath": "H:\\Github\\c-sharp\\CalculatorApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ghost DEV\\AppData\\Roaming\\NuGet\\NuGet.Config"
