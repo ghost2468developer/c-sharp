@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "H:\\Github\\c-sharp\\BankSystem\\BankSystem.csproj": {}
+    "H:\\Github\\c-sharp\\03. BankSystem\\BankSystem.csproj": {}
   },
   "projects": {
-    "H:\\Github\\c-sharp\\BankSystem\\BankSystem.csproj": {
+    "H:\\Github\\c-sharp\\03. BankSystem\\BankSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\Github\\c-sharp\\BankSystem\\BankSystem.csproj",
+        "projectUniqueName": "H:\\Github\\c-sharp\\03. BankSystem\\BankSystem.csproj",
         "projectName": "BankSystem",
-        "projectPath": "H:\\Github\\c-sharp\\BankSystem\\BankSystem.csproj",
+        "projectPath": "H:\\Github\\c-sharp\\03. BankSystem\\BankSystem.csproj",
         "packagesPath": "C:\\Users\\Ghost DEV\\.nuget\\packages\\",
-        "outputPath": "H:\\Github\\c-sharp\\BankSystem\\obj\\",
+        "outputPath": "H:\\Github\\c-sharp\\03. BankSystem\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ghost DEV\\AppData\\Roaming\\NuGet\\NuGet.Config"
